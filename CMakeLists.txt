@@ -91,6 +91,7 @@ set(MOONLIGHT_COMMON_INCLUDE_DIR ./third_party/moonlight-common-c/src)
 set(GAMESTREAM_INCLUDE_DIR ./libgamestream)
 
 include_directories("${PROJECT_BINARY_DIR}")
+include_directories("/opt/homebrew/opt/openssl@1.1/include")
 
 add_subdirectory(libgamestream)
 
