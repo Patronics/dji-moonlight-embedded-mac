@@ -20,7 +20,7 @@
 #include "config.h"
 #include "configuration.h"
 #include "connection.h"
-#include "loop.h"
+//#include "loop.h"
 #include "platform.h"
 #include "sdl.h"
 
@@ -151,7 +151,7 @@ static void stream(PSERVER_DATA server, PCONFIGURATION config, enum platform sys
   }
 
   if (IS_EMBEDDED(system))
-    loop_init();
+    //loop_init();
 
   platform_start(system);
   LiStartConnection(&server->serverInfo, &config->stream, &connection_callbacks, platform_get_video(system), platform_get_audio(system, config->audio_device), NULL, drFlags, config->audio_device, 0);
@@ -160,7 +160,7 @@ static void stream(PSERVER_DATA server, PCONFIGURATION config, enum platform sys
   {
     // if (!config->viewonly)
     //   evdev_start();
-    loop_main();
+    //loop_main();
     // if (!config->viewonly)
     //   evdev_stop();
   }
